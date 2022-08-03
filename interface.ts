@@ -43,3 +43,11 @@ function moveAnimal(animal: Animal): void {
 }
 
 moveAnimal({type: 'bird', flyingSpeed: 10})
+
+// Generics
+function merge<T extends object, U extends object >(objA: T, objB: U){
+    return Object.assign(objA, objB)
+}
+
+const mergedObj = merge({ name: 'Dabsia', hobbies: ['Football'] }, { age: 30 })
+console.log(mergedObj)
